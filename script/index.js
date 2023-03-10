@@ -4,3 +4,8 @@ $('.owl-carousel').owlCarousel({
     loop:true,
     margin:10
 });
+
+function navToggle() {
+    document.getElementById('headerAUTH').classList.toggle('_active');
+ }
+

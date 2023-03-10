@@ -1,13 +1,24 @@
 .servises-sectian {
     margin: 111px 0;
     text-align: center;
+    
         .title {
             margin-bottom: 70px;
+            @include tablet-small {
+                margin-bottom: 20px;
+                font-size: 30px;
+            }
     }
     .desc {
         max-width: 837px;
         margin-inline: auto;
         margin-bottom: 123px;
+        @include tablet-small {
+            margin-bottom: 40px;
+        }
+    }
+    @include tablet-small {
+        margin: 60px 0;
     }
 }
 
@@ -15,6 +26,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
+   
+
     @include tablet-small {
         grid-template-columns: 1fr 1fr;
     }
@@ -27,7 +40,7 @@
         background: $terciary;
         border-radius: 15px;
         padding: 26px 46px;
-
+        transform: $transition;
         &__img {
             margin-bottom: 27px;
         }
@@ -42,20 +55,21 @@
             margin-bottom: 17px;
         }
     
-        &__action {
-           
-        }
+       
         &:hover {
             background: $primery;
         .servises-card__title, .servises-card__desc, a {
             color: $white;
-        }
+               }
         svg path {
             fill: $white;
         }
+        
         }
        
     }
 
    
 }
+
+

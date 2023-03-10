@@ -1,14 +1,119 @@
+
 .docter-sectian {
     text-align: center;
     margin-bottom: 123px;
 
-    .title {
-        margin-bottom: 70px;
-    }
 
-    .desc {
-        max-width: 837px;
-        margin-inline: auto;
-        margin-bottom: 123px;
+		&__cards {
+            display: grid;
+             grid-template-columns: 1fr 1fr 1fr;
+             gap: 27px;
+
+             @include tablet-small {
+                grid-template-columns: 1fr 1fr;
+            }
+        
+            @include mobile {
+                grid-template-columns: 1fr;
+            }
+		}
+
+		&__card {
+            background: $terciary;
+            border-radius: 20px;
+            padding-bottom: 44px;
+            transition: $transition;
+            
+		}
+}
+.title {
+    margin-bottom: 70px; 
+    @include tablet-small {
+        margin-bottom: 20px;
+        font-size: 30px;
     }
 }
+.desc {
+    max-width: 837px;
+    margin-inline: auto;
+    margin-bottom: 123px;
+    @include tablet-small {
+        margin-bottom: 40px;
+    }
+}
+.docter-card {
+    
+
+		&__head {
+            display: flex;
+            gap: 13px;
+            padding: 44px 38px 25px 38px;
+		}
+
+		&__photo {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            
+		}
+
+		&__title {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            flex-grow: 1;
+
+            
+            
+		}
+
+		&__desc {
+          
+         word-break: break-all;
+         padding: 0 38px 28px 38px;
+         @include text ($ff, 16px, 19px, 400, $text);
+         flex-grow: 1;
+         transition: $transition;
+
+         
+		}
+
+		&__btn {
+                      background: $primery;
+            padding: 10px 29px;
+            border-radius: 50px;            
+            @include text ($ff, 20px, 23px, 600, $white);
+            max-width: 100%;
+            @include tablet-small {
+                font-size: 16px;
+                font-weight: 20px;
+            }
+		}
+}
+
+.docter__title-big {
+    @include text ($ff, 20px, 23px, 600, $paragrapf);
+    
+   
+}
+
+.docter__title-mini {
+    @include text ($ff, 16px, 19px, 400, $text);
+
+    
+}
+.docter-sectian__card:hover {
+    transform: translate(10px);
+    transform: scale(1.1);
+    background: #caaef4;
+    .docter__title-big, .docter-card__desc, .docter__title-mini {
+        color: $white;
+       
+        }
+    }
+
+        .docter-card__desc:hover {
+color: $white;
+        }
+        

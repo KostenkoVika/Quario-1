@@ -1,0 +1,82 @@
+.form-sectian {
+
+    &__rectangle {
+        background-color: $bleck;
+        border-radius: 10px;
+        margin-bottom: 131px;
+        padding-bottom: 80px;
+        margin-top: 129px;
+
+    }
+
+    &__title {
+        text-align: center;
+       padding-top: 80px;
+       padding-bottom: 47px;
+       @include text ($ff, 36px, 42px, 700, $white);
+       @include tablet {
+        font-size: 30px;
+       }
+      
+    }
+
+    .form-sectian__field {
+        display: inline-block;
+margin: auto;
+        position: relative;
+    }
+
+    &__input {
+        
+        background: $white;
+        border-radius: 50px;
+        display: inline-block;
+        border: 0;
+        outline: none;
+        padding: 18px 31px;
+        padding-right: 170px;
+        min-width: 717px;
+        ::placeholder {
+            @include text ($ff, 16px, 19px, 400, $text);
+        }
+        @include tablet {
+            min-width: 500px;
+            padding-right: 100px;
+        }
+        @include mobile {
+            min-width: 400px;
+            padding-right: 40px;
+        }
+
+    }
+    
+    button {
+        position: absolute;
+        background: $primery;
+        display: inline-block;
+        right: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 22px;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+        @include text ($ff, 20px, 23px, 600, $white);
+        padding: 10px 18px;
+        @include mobile {
+            position: static;
+            margin-top: 60px;
+        }
+
+    }
+    
+
+
+    
+}
+
+
+
+
+            
+           

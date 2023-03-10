@@ -1,0 +1,63 @@
+.footer {
+    background: $terciary;
+    display: flex;
+    justify-content: flex-start;
+    gap: 108px;
+    padding: 106px 147px 85px 147px;
+    flex-wrap: wrap;
+    @include tablet-small {
+      gap: 80px;
+      @include desktop-small {
+            padding: 40px 14px 20px 20px;  
+      }
+    }
+    
+    }
+.Quario {
+
+		&__title {
+            @include text ($ff, 24px, 28px, 600, $paragrapf);
+            padding-bottom: 26px;
+		}
+
+		&__desc {
+            max-width: 431px;
+            @include text ($ff, 16px, 19px, 400, $paragrapf);
+            word-break: break-all;
+		}
+            @include tablet-small {
+                  display: none;
+            }
+}
+.contact {
+
+		&__adress,  &__phone, &__mail {
+            @include text ($ff, 20px, 23px, 600, $paragrapf);
+            padding-bottom: 9px;
+		}
+
+		&__adress-desc, &__phone-desc, &__mail-desc {
+            @include text ($ff, 16px, 19px, 400, $paragrapf);
+            padding-bottom: 37px;
+            @include desktop-small {
+                  padding-bottom: 20px;
+            }
+		}
+
+		
+}
+.open {
+
+		&__hour {
+            @include text ($ff, 20px, 23px, 600, $paragrapf);
+            padding-bottom: 17px;
+		}
+            @include mobile {
+                  display: none;
+            }
+}
+.open__day {
+
+    @include text ($ff, 16px, 19px, 400, $paragrapf);
+    padding-bottom: 15px;
+}
