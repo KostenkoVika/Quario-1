@@ -24,7 +24,11 @@
             &::placeholder {
             color: $white;
             }
+            @include tablet-small {
+                min-width: 300px;
+            }
         }
+       
         img {
             position: absolute;
             top: 50%;
@@ -65,23 +69,22 @@
         }
         #close {
             display: none;
+            cursor: pointer;
          }
 
          #menu {
             display: none;
+            cursor: pointer;
          }
 
         @include tablet-small {
+            .header { display: flex;
+            flex-direction: column;
+        justify-content: center;}
 
 
-            .header__logo {
-                margin: auto;
-                font-size: 30px;
-                
-            }
-            .header__search {
-               display: none;
-            }
+           
+           
 
             .nav__ul {
                 display: flex;

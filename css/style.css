@@ -392,6 +392,9 @@ li {
         color: #FFFFFF; }
       .header__search input::placeholder {
         color: #FFFFFF; }
+      @media (max-width: 992px) {
+        .header__search input {
+          min-width: 300px; } }
     .header__search img {
       position: absolute;
       top: 50%;
@@ -433,18 +436,25 @@ li {
     bottom: -3px; }
 
 #close {
-  display: none; }
+  display: none;
+  cursor: pointer; }
 
 #menu {
-  display: none; }
+  display: none;
+  cursor: pointer; }
 
 @media (max-width: 992px) {
-  .header__logo {
-    margin: auto;
-    font-size: 30px; }
-
-  .header__search {
-    display: none; }
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
 
   .nav__ul {
     display: -webkit-box;
@@ -737,6 +747,10 @@ li {
     .form-sectian__input {
       min-width: 400px;
       padding-right: 40px; } }
+  @media (max-width: 460px) {
+    .form-sectian__input {
+      min-width: 300px;
+      padding: 12px 20px; } }
 .form-sectian button {
   position: absolute;
   background: #8842F0;

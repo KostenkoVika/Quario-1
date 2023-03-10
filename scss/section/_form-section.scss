@@ -47,7 +47,12 @@ margin: auto;
             min-width: 400px;
             padding-right: 40px;
         }
+       @include mobile-small {
+        min-width: 300px;
+        padding: 12px 20px;
 
+       }
+       
     }
     
     button {
